@@ -1,0 +1,267 @@
+//----------------------------------------//
+//                                        //
+//  Text styles                           //
+//                                        //
+//----------------------------------------//
+
+
+@mixin text--body() { //CHECKED
+  font-family: $font_family_1;
+  @include font-size($text_size_default);
+  line-height: $text_lineheight_default;
+  color: $text_normal_color;
+  letter-spacing: $text_letterspacing_default;
+}
+
+
+@mixin text--large() { //CHECKED
+  @include font-size(1.6);
+  line-height: 1.25em;
+}
+
+
+
+// Titles
+
+
+@mixin text--title--0($separator: false) {//Checked
+  font-family: $font_family_2;
+  @include font-size(3);
+  letter-spacing: -1.54px;
+
+  color: $title1_color;
+  margin: 0 0 30px 0;
+  line-height: 1.2em;
+
+  @if ($separator) {
+    position: relative;
+    padding-top: 10px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 3px;
+      border-radius: 1.5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $title1_color;
+    }
+  }
+
+
+  @media (min-width: $mq_min_large_tablet) {
+    @include font-size(6);
+    letter-spacing: -3.08px;
+
+  }
+
+}
+
+@mixin text--title--1() { //CHECKED
+  font-family: $font_family_2;
+  font-weight: 400;
+  @include font-size(3);
+  color: $title1_color;
+  letter-spacing: -1.54px;
+  line-height: 1.267em;
+  margin: 0 0 10px 0;
+  position: relative;
+
+  @media (min-width: $mq_min_small_tablet) {
+    @include font-size(4.4);
+    letter-spacing: -2.26px;
+  }
+
+}
+
+@mixin text--subtitle--1() { //CHECKED
+  font-family: $font_family_1;
+  font-weight: 400;
+  @include font-size(2);
+  color: $title1_color;
+  letter-spacing: -1.03px;
+  line-height: 1.25em;
+  margin: 0 0 20px 0;
+}
+
+@mixin text--title--2($separator: false) {//Checked
+  font-family: $font_family_1;
+  @include font-size(2.6);
+  font-weight: bold;
+  letter-spacing: -0.29px;
+  color: $title1_color;
+  margin: 0 0 30px 0;
+
+  @if ($separator) {
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 3px;
+      border-radius: 1.5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $title1_color;
+    }
+  }
+
+}
+
+@mixin text--title--3($separator: false) {//Checked
+  font-family: $font_family_1;
+  @include font-size(2.0);
+  letter-spacing: -0.29px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: $title1_color;
+
+  @if ($separator) {
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 3px;
+      border-radius: 1.5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $title1_color;
+    }
+  }
+}
+
+
+@mixin text--title--4($separator: false) { //Checked
+  font-family: $font_family_1;
+  @include font-size(1.6);
+  font-weight: bold;
+  color: $title1_color;
+  letter-spacing: -0.23px;
+  margin: 0 0 5px 0;
+
+
+  @if ($separator) {
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 3px;
+      border-radius: 1.5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $title1_color;
+    }
+  }
+}
+
+@mixin text--title--5($separator: false) { //Checked
+  font-family: $font_family_1;
+  @include font-size(1.4);
+  font-weight: bold;
+  color: $title1_color;
+  letter-spacing: -0.23px;
+  margin: 0 0 5px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @if ($separator) {
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 26px;
+      height: 3px;
+      border-radius: 1.5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $title1_color;
+    }
+  }
+}
+
+
+@mixin text--intro() {
+  @include font-size(2);
+  line-height: 1.25em;
+  letter-spacing: -1.03px;
+}
+
+
+@mixin text--button() { //CHECKED
+  font-family: $font_family_1;
+  font-weight: bold;
+  @include font-size(1.4);
+  line-height: 1em;
+  letter-spacing: -0.27px;
+  text-align: center;
+}
+
+@mixin text--button--large() { //CHECKED
+  font-family: $font_family_1;
+  font-weight: bold;
+  @include font-size(2);
+  line-height: 1em;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+@mixin text--label() {//CHECKED
+  font-family: $font_family_1;
+  font-weight: bold;
+  @include font-size(1.4);
+  letter-spacing: 0;
+}
+
+@mixin text--input() {
+  font-family: $font_family_1;
+  font-weight: bold;
+  @include font-size(2.0); //16px
+  letter-spacing: 0;
+}
+
+@mixin text--input-placeholder() {
+  font-weight: 400;
+}
+
+@mixin text--small() {//CHECKED
+  @include font-size(1.2);
+  letter-spacing: -0.13px;
+  line-height: 1.25em;
+}
+
+@mixin text--footer() { //CHECKED
+  @include text--small;
+}
+
+@mixin text--navigation() { //CHECKED
+  font-weight: bold;
+  @include font-size(2.0);
+  letter-spacing: 0;
+
+  @media (min-width: $mq_min_medium_tablet) {
+    @include font-size(1.4);
+  }
+
+  @media (min-width: $mq_min_large_tablet) {
+    @include font-size(1.6);
+  }
+
+}

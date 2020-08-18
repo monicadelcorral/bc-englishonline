@@ -1,0 +1,176 @@
+
+body:not(.edit).body_clase {
+
+  .navbar.libro,
+  .navbar.libro .libro-right,
+  .navbar.libro .libro-left {
+    background: $color_1!important;
+    a {
+      transition: background-color .3s linear, color .3s linear;
+    }
+    .blink-hover-active {
+      background-color: $color_5!important;
+    }
+  }
+
+  .libro-right ul li.close-back-wrapper:before,
+  .libro-right ul li.close-back-wrapper:after {
+    display: none;
+  }
+
+  .libro-right {
+    ul {
+      li {
+        &:not(.close-back-wrapper):not(#enter-edit-mode) {
+          display: none;
+        }
+
+        &.close-back-wrapper {
+          &::after,
+          &::before {
+            content: none;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-bottom {
+    display: none!important;
+  }
+
+  .content-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+
+#actividad {
+
+  .content .header {
+    border: 0;
+    display: none;
+
+    .title img,
+    .chapter {
+      display: none;
+    }
+
+  }
+
+  .class_slide {
+    padding: 40px;
+  }
+
+  .carousel-inner {
+    .item-container {
+      background: $color_2;
+      border-radius: 0 40px 0 40px;
+      box-shadow: $box_shadow;
+    }
+  }
+
+  .bck-title2,
+  .bck-title3 {
+    @include text--title--2(true);
+    span, strong {
+      color: $color_1!important;
+    }
+  }
+
+  .btn {
+    @include button-base;
+    @include text--button;
+    padding: 10px 22px;
+    border: 3px solid transparent;
+
+    &.btn-danger {
+      background-color: $color_ok;
+      color: $color_2;
+    }
+
+    &.btn-primary,
+    &.btn-solution {
+      background: $button_background_color_4;
+      color: $button_color_4;
+      border-color: $button_border_color_4;
+
+      &:hover {
+        background-color: $color_3;
+        color: $button_color_4;
+        border-color: $color_3;
+      }
+    }
+    &.btn-primary[disabled] {
+      &, &:focus {
+        background: $color_7;
+        color: $color_8;
+        border-color: $color_7;
+      }
+    }
+  }
+
+  .class_slide .review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn.btn-danger,
+    .btn.btn-solution {
+      order: 2;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .btn-reset {
+      order: 0;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .attemps {
+      order: 1;
+      margin: 0 20px;
+      min-width: 33.333%;
+      text-align: center;
+      flex-grow: 2;
+      flex-basis: 0;
+    }
+
+  }
+  .content .review .attemps span {
+    background: $color_1;
+    color: $color_2;
+  }
+
+
+  .workspace.matching {
+    .opcion {
+      padding: 0;
+      border: 2px solid $color_1;
+      border-radius: 4px;
+      box-shadow: $box_shadow;
+      margin-bottom: 10px;
+
+      .box {
+        padding: 4px;
+        color: $color_1;
+        transition: background-color .3s linear;
+        font-weight: 400;
+      }
+
+      &.respuesta_over:not(.disabled) {
+        .box {
+          background-color: $color_6;
+        }
+      }
+      &.respuesta_over.disabled {
+        .box {
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

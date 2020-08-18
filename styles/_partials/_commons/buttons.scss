@@ -1,0 +1,180 @@
+// Buttons
+
+@mixin button-base() {
+  max-width: 100%;
+  border-radius: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  transition-property: color, background-color, border-color, box-shadow, opacity, height;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  & > span {
+    white-space: normal;
+    display: inline;
+    text-align: center;
+  }
+
+  & > .icon, & > span  {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+  }
+  &.disabled {
+    cursor: default;
+  }
+  input {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+}
+
+
+@mixin button-icon() {
+	@include button-base();
+	padding: 0;
+  width: 32px;
+  height: 32px;
+
+	span {
+		@include screen-reader-text();
+	}
+	.icon {
+    font-size: 22px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+/*
+
+.btn {
+  @include button-base;
+  @include text--button;
+  border: 3px solid transparent;
+
+  &:focus, &.focus {
+    box-shadow: none;
+  }
+
+  &--primary {
+    background: $button_background_color_1;
+    color: $button_color_1;
+    border-color: $button_border_color_1;
+
+  }
+
+  &--secondary {
+    color: $button_color_2;
+    background: $button_background_color_2;
+    border-color: $button_border_color_2;
+  }
+
+  &--tertiary {
+    color: $button_color_3;
+    background: $button_background_color_3;
+    border-color: $button_border_color_3;
+
+    &:hover {
+      color: $button_color_3;
+    }
+
+  }
+
+  &--quaternary {
+    color: $button_color_4;
+    background: $button_background_color_4;
+    border-color: $button_border_color_4;
+
+    &:hover {
+      color: $button_color_4;
+    }
+
+  }
+
+  &--seamless {
+    color: $color_2;
+    background: transparent;
+    border-color: $color_2;
+
+    &:hover {
+      color: $color_2;
+    }
+
+  }
+
+  &--small {
+    padding: 10px 22px 12px;
+    width: 88px;
+  }
+
+  &--medium {
+    padding: 10px 22px 12px;
+  }
+
+  &--large {
+    padding: 15px 30px;
+  }
+
+  &--extralarge {
+    @include text--button--large();
+    padding: 18px 46px;
+  }
+
+  &--rounded {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+
+    span:not(.btn__icon) {
+      @include screen-reader-text;
+    }
+
+    .btn__icon {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+
+    &::before {
+      @include icon();
+    }
+
+    &--done {
+      margin-right: 4px;
+      margin-top: 2px;
+      margin-bottom: -2px;
+
+      &::before {
+        content: $icon-check;
+      }
+    }
+
+    &--notification {
+      &::before {
+        font-size: 16px;
+        content: $icon-notification;
+      }
+    }
+  }
+}
+*/

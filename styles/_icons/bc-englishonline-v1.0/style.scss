@@ -1,0 +1,100 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?37lkyy') format('woff2'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?37lkyy') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?37lkyy') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?37lkyy##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-blocked {
+  &:before {
+    content: $icon-blocked; 
+  }
+}
+.icon-activity-activity {
+  &:before {
+    content: $icon-activity-activity; 
+  }
+}
+.icon-activity-audio {
+  &:before {
+    content: $icon-activity-audio; 
+  }
+}
+.icon-activity-video {
+  &:before {
+    content: $icon-activity-video; 
+  }
+}
+.icon-students {
+  &:before {
+    content: $icon-students; 
+  }
+}
+.icon-logout {
+  &:before {
+    content: $icon-logout; 
+  }
+}
+.icon-notification {
+  &:before {
+    content: $icon-notification; 
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content: $icon-chevron-down; 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: $icon-chevron-left; 
+  }
+}
+.icon-chevron-right {
+  &:before {
+    content: $icon-chevron-right; 
+  }
+}
+.icon-appstore {
+  &:before {
+    content: $icon-appstore; 
+  }
+}
+.icon-googleplay {
+  &:before {
+    content: $icon-googleplay; 
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check; 
+  }
+}
+.icon-check-rounded {
+  &:before {
+    content: $icon-check-rounded; 
+  }
+}
+

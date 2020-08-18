@@ -1,0 +1,31 @@
+//----------------------------------------//
+//                                        //
+//  Basic styles                          //
+//                                        //
+//----------------------------------------//
+
+
+html {
+  position: relative;
+  font-size: 62.5%;
+  overflow: hidden;
+  height: 100%;
+}
+
+body.body_clase:not(.edit) {
+  position: relative;
+  height: 100%;
+  z-index: 100;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  margin: 0;
+  padding: 0;
+  background: $body_background;
+
+  @include text--body();
+
+}

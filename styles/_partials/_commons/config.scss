@@ -1,0 +1,148 @@
+//----------------------------------------//
+//                                        //
+//  Styles config                         //
+//                                        //
+//----------------------------------------//
+
+
+// Media Query ranges
+$mq_min_large_desktop: 1340px;
+$mq_min_small_desktop: 1200px;
+$mq_min_large_tablet: 1000px;
+$mq_min_medium_tablet: 768px;
+$mq_min_small_tablet: 680px;
+$mq_min_large_phone: 520px;
+$mq_min_small_phone: 360px;
+$mq_min_xs_phone: 330px;
+
+$mq_max_xxl_tablet: $mq_min_large_desktop - 1;
+$mq_max_large_tablet: $mq_min_small_desktop - 1;
+$mq_max_xl_tablet: $mq_min_large_tablet - 1;
+$mq_max_small_tablet: $mq_min_medium_tablet - 1;
+$mq_max_large_phone: $mq_min_small_tablet - 1;
+$mq_max_small_phone: $mq_min_large_phone - 1;
+$mq_max_smallest_phone: $mq_min_small_phone - 1;
+$mq_max_xs_phone: $mq_min_xs_phone - 1;
+
+// Layout dimensions
+
+$layout_max_width: 1320px;
+$layout_max_halfwidth: 660px;
+
+$layout_space : 110px;
+$layout_space_tablet : 40px;
+$layout_space_mobile : 20px;
+
+// Colors
+
+$body_background: #ffffff;
+
+$color_1 : #23085A;//CHECKED
+$color_2 : #ffffff;//CHECKED
+$color_3 : #00DCFF;//CHECKED
+$color_4 : #FFE300; //CHECKED
+$color_5: #005CB9; //CHECKED
+$color_6: #F2F2F2; //CHECKED
+$color_7: #BDBDBD; //CHECKED
+$color_8: #54555B; //CHECKED
+
+$color_notification: #E30202; //CHECKED
+
+$text_normal_color: #54555B; //CHECKED
+$text_link_color: $color_1;//CHECKED
+$text_link_hover_color: $color_4;
+
+$title1_color: $color_1;//CHECKED
+
+$color_tag_1 : $color_1;//CHECKED
+$bgcolor_tag_1 : $color_2;//CHECKED
+$color_tag_2 : $color_2;//CHECKED
+$bgcolor_tag_2 : $color_1;//CHECKED
+$color_badge : $color_2;//CHECKED
+$bgcolor_badge : $color_1;//CHECKED
+$bordercolor_badge : $color_3;//CHECKED
+
+$button_color_1 : $color_1;//CHECKED
+$button_background_color_1 : $color_3;//CHECKED
+$button_border_color_1 : $button_background_color_1;//CHECKED
+$button_color_2 : $color_1;//CHECKED
+$button_background_color_2 : $color_2;//CHECKED
+$button_border_color_2 : $color_3;//CHECKED
+$button_color_3 : $color_2;//CHECKED
+$button_background_color_3 : $color_1;//CHECKED
+$button_border_color_3 : $color_1;//CHECKED
+$button_color_4 : $color_1;//CHECKED
+$button_background_color_4 : $color_4;//CHECKED
+$button_border_color_4 : $color_4;//CHECKED
+
+
+
+$color_track : $color_2;
+$color_thumb : #54555B;
+
+
+$button_hover_color : $text_normal_color; //TODO CHECK
+$button_hover_background : $text_link_color; //TODO CHECK
+
+$progress_bar_bg_color : $color_6;//CHECKED
+$progress_bar_color :$color_1;//CHECKED
+
+$popover_background_color: $color_2;//CHECKED
+$popover_border_color: $color_6;//CHECKED
+$popover_empty_color: $text_normal_color;//CHECKED
+
+$color_ok: #01C900; //CHECKED
+$color_error: #EA0034; //CHECKED
+$color_regular : #FFD200; //CHECKED
+
+$text_selection_color: $text_normal_color;
+$text_selection_background_color: $color_4;
+
+$header_background: $color_2; //CHECKED
+$header_color: $color_1; //CHECKED
+$header_link_color: $color_1; //CHECKED
+$header_link_border_active: $color_4; //CHECKED
+$header_link_color_collapsed: $color_2; //CHECKED
+
+$logo_brand_background : $color_1;
+
+$form_input_background_color: fade-out($color_2, .9);
+$form_input_border_color: $color_2;
+$form_input_prefilled_border_color: $color_5;
+$form_input_color: $color_2;
+$form_input_placeholder_color: $color_3;
+$form_input_background_color_error: $color_2;
+
+// Text size and typography
+
+$text_size_default: 1.4; //CHECKED
+$text_lineheight_default : 1.214; //em //CHECKED
+$text_letterspacing_default : -0.16px; //CHECKED
+
+// Fonts
+$font_family_1: 'British Council Sans'; //CHECKED
+$font_family_2: 'British Council Sans Headline'; //CHECKED
+
+// Spaces
+
+$space_1: 6rem; //CHECKED
+$space_2: 1.5rem; //CHECKED
+$space_3: 2rem; //CHECKED
+$space_4: 4rem; //CHECKED
+
+$form1_width : 340px;
+
+$header_max_width: 1234px; //CHECKED
+$header_progress_height : 34px;//CHECKED
+$header_height_mobile : 60px; //CHECKED
+$header_height_tablet : 70px; //CHECKED
+$header_height : 80px; //CHECKED
+$header_height_tablet_wbar : $header_height_tablet + $header_progress_height; //CHECKED
+$header_height_wbar : $header_height + $header_progress_height; //CHECKED
+
+// Round corners and borders
+
+$round_corner : 30px; //CHECKED
+$round_corner_large : 40px; //CHECKED
+
+$box_shadow: 2px 2px 15px 0 rgba(0,0,0,0.10);

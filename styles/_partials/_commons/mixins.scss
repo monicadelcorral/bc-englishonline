@@ -1,0 +1,126 @@
+//----------------------------------------//
+//                                        //
+//  Mixins                                //
+//                                        //
+//----------------------------------------//
+
+@mixin checkbox-label-checked() {
+	.radio-label {
+		&::after {opacity: 1;}
+  	&::before {
+	    background-color: $negative_color;
+	    border-color: $color_4;
+	  }
+	}
+}
+
+//Clearfix
+
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Font size
+
+@mixin font-size($sizeValue) {
+	$remValue: $sizeValue;
+	$pxValue: ($sizeValue * 10);
+	font-size: $pxValue+px;
+	font-size: $remValue+rem;
+}
+
+
+// Screen Reader Text
+
+@mixin screen-reader-text() {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+
+// Img adjustables
+
+@mixin img-fit($fit: cover, $position: center center, $width: 100%) {
+	img {
+		width: $width;
+		height: 100%;
+		object-fit: $fit;
+		object-position: $position;
+		display: block;
+	}
+	&.compat-object-fit {
+		background-size: $fit;
+		background-repeat: no-repeat;
+		background-position: $position;
+		img {
+			visibility: hidden;
+		}
+	}
+}
+
+// Aspect Ratio
+
+@mixin aspect-ratio($width, $height) {
+	height: 0;
+	padding: 0;
+	padding-top: ($height / $width) * 100%;
+	position: relative;
+	& > * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+
+//
+// Prefixed styeles fot placehoders
+//
+// Usage:
+// .selector {
+//   @include placeholder {
+//     font-style:italic;
+//     color: white;
+//     font-weight:100;
+//   }
+// }
+///
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') {
+	 @content;
+	}
+	@include optional-at-root(':-moz-placeholder') {
+	 @content;
+	}
+	@include optional-at-root('::-moz-placeholder') {
+	 @content;
+	}
+	@include optional-at-root(':-ms-input-placeholder') {
+	 @content;
+	}
+	@include optional-at-root('::placeholder ') {
+	 @content;
+	}
+
+}
