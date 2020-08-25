@@ -3,10 +3,10 @@
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?37lkyy') format('woff2'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?37lkyy') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?37lkyy') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?37lkyy##{$icomoon-font-family}') format('svg');
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?jojvm5') format('woff2'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?jojvm5') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?jojvm5') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?jojvm5##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-error-rounded {
+  &:before {
+    content: $icon-error-rounded; 
+  }
+}
+.icon-filters {
+  &:before {
+    content: $icon-filters; 
+  }
+}
 .icon-blocked {
   &:before {
     content: $icon-blocked; 
