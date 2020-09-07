@@ -36,12 +36,14 @@ body:not(.edit).body_clase {
     }
   }
 
+  .navbar-libro,
   .navbar-bottom {
     display: none!important;
   }
 
   .content-wrapper {
     padding-bottom: 0;
+    padding-top: 0;
   }
 }
 
@@ -145,6 +147,14 @@ body:not(.edit).body_clase {
     color: $color_2;
   }
 
+  .workspace.memory .front {
+    background-image: none;
+    background-color: $color_3;
+    border-color: $color_3;
+    &:hover {
+      background-color: $color_5;
+    }
+  }
   .workspace.chooseblanks {
     .inline-answer {
       a {
@@ -412,4 +422,40 @@ body:not(.edit).body_clase {
   &::before {
     background-color: $color_1;
   }
+}
+
+
+.bck-dropdown-icon>.fa {
+  border: 3px solid $color_1;
+  color: $color_1;
+  font-size: 16px;
+}
+
+.bck-dropdown-titulo {
+  color: $color_1;
+}
+
+.bck-dropdown-content {
+  background: $color_2;
+  padding: 0;
+  border: 0;
+  max-height: 420px;
+
+  table {
+    border: 0;
+  }
+}
+
+
+.ias_loader .dot, #lista-actividades .dot, #lista-multimedia .dot, #blinkTransp .dot, #mensajes_list .dot, .content .dot, #destinatarios_parent .dot, #responseimg .dot {
+  background-color: $color_1;
+}
+
+
+// Boxes
+
+.box-2 {
+  background: $color_6;
+  padding: 40px;
+  margin-bottom: 40px;
 }
