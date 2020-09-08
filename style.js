@@ -1,12 +1,12 @@
 (function (blink) {
 	'use strict';
 
-	var BCStyle = function () {
-			blink.theme.styles.basic.apply(this, arguments);
-		},
-		page = blink.currentPage;
+	var BCEnglishOnlineStyle = function () {
+		blink.theme.styles.basic.apply(this, arguments);
+	},
+	page = blink.currentPage;
 
-	BCStyle.prototype = {
+	BCEnglishOnlineStyle.prototype = {
 		parent: blink.theme.styles.basic.prototype,
 		bodyClassName: 'content_type_clase_bc-englishonline',
 		extraPlugins: ['image2'],
@@ -42,8 +42,8 @@
 
 	};
 
-	BCStyle.prototype = _.extend({}, new blink.theme.styles.basic(), BCStyle.prototype);
+	BCEnglishOnlineStyle.prototype = _.extend({}, new blink.theme.styles.basic(), BCEnglishOnlineStyle.prototype);
 
-	blink.theme.styles.bcenglishonline = BCStyle;
+	blink.theme.styles.bcenglishonline = BCEnglishOnlineStyle;
 
 })( blink );
