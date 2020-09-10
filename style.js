@@ -14,11 +14,11 @@
 			name: 'bc-englishonline',
 			styles: [
 
-				{ name: 'TÃ­tulo 1', element: 'h4', attributes: { 'class': 'bck-title1'} },
-				{ name: 'TÃ­tulo 2', element: 'h4', attributes: { 'class': 'bck-title2'} },
-				{ name: 'TÃ­tulo 3', element: 'h4', attributes: { 'class': 'bck-title3'} },
+				{ name: 'Tí­tulo 1', element: 'h4', attributes: { 'class': 'bck-title1'} },
+				{ name: 'Tí­tulo 2', element: 'h4', attributes: { 'class': 'bck-title2'} },
+				{ name: 'Tí­tulo 3', element: 'h4', attributes: { 'class': 'bck-title3'} },
 
-				{ name: 'Ã‰nfasis', element: 'span', attributes: { 'class': 'bck-enfasis' }},
+				{ name: 'Énfasis', element: 'span', attributes: { 'class': 'bck-enfasis' }},
 				{ name: 'Enunciado actividad', element: 'h4', attributes: { 'class': 'bck-title-activity' }},
 
 				{ name: 'Tabla centrada', element: 'table', type: 'bck-stack-class', attributes: { 'class': 'bck-table-center'} },
@@ -44,6 +44,6 @@
 
 	BCEnglishOnlineStyle.prototype = _.extend({}, new blink.theme.styles.basic(), BCEnglishOnlineStyle.prototype);
 
-	blink.theme.styles.bcenglishonline = BCEnglishOnlineStyle;
+	blink.theme.styles.bc-englishonline = BCEnglishOnlineStyle;
 
 })( blink );

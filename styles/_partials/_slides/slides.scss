@@ -258,10 +258,11 @@ body:not(.edit).body_clase {
         align-items: center;
         border-collapse: collapse;
         width: 100%;
-        padding: 6px;
+        padding: 20px 0px;
         margin: 0 0 15px;
         background: $color_1;
         color: $color_2;
+        box-sizing: content;
     }
   }
 
