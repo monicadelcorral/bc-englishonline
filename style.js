@@ -44,6 +44,6 @@
 
 	BCEnglishOnlineStyle.prototype = _.extend({}, new blink.theme.styles.basic(), BCEnglishOnlineStyle.prototype);
 
-	blink.theme.styles.bcenglishonline = BCEnglishOnlineStyle;
+	blink.theme.styles['bc-englishonline'] = BCEnglishOnlineStyle;
 
 })( blink );
