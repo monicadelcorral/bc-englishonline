@@ -67,14 +67,19 @@ body:not(.edit).body_clase {
     padding: 40px;
   }
 
+  #swipeview-slider>div {
+    background: $color_2;
+  }
+
   .carousel-inner {
     .item-container {
       background: $color_2;
-      border-radius: 0 40px 0 40px;
-      box-shadow: $box_shadow;
+      border-radius: 0;
+      box-shadow: none;
     }
   }
 
+  .bck-title1,
   .bck-title2,
   .bck-title3 {
     @include text--title--2(true);
@@ -456,8 +461,9 @@ body:not(.edit).body_clase {
 
 
 // Boxes
-
-.box-2 {
+.box-1,
+.box-2,
+.box-3 {
   background: $color_6;
   padding: 40px;
   margin-bottom: 40px;
