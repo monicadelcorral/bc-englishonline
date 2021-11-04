@@ -65,6 +65,11 @@ body:not(.edit).body_clase {
 
   .class_slide {
     padding: 40px;
+
+    @media (max-width: $mq_max_large_phone) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   #swipeview-slider>div {
@@ -125,12 +130,18 @@ body:not(.edit).body_clase {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    @media (max-width: $mq_max_large_phone) {
+      flex-wrap: wrap;
+    }
     .btn.btn-danger,
     .btn.btn-solution {
       order: 2;
       flex-grow: 1;
       flex-basis: 0;
+
+      @media (max-width: $mq_max_large_phone) {
+        margin: 0 10px;
+      }
     }
 
     .btn-reset {
@@ -147,6 +158,12 @@ body:not(.edit).body_clase {
       flex-grow: 2;
       flex-basis: 0;
       visibility: hidden;
+
+      @media (max-width: $mq_max_large_phone) {
+        order: 3;
+        min-width: 100%;
+        margin-top: 16px;
+      }
     }
 
   }
