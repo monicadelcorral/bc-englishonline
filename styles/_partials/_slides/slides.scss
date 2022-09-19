@@ -336,9 +336,44 @@ body:not(.edit).body_clase {
   }
 }
 
-
 .slider-control, .slider-control:focus {
+  background: $color_1;
+  opacity: 1;
+  width: 78px;
+  height: 78px;
+  border-radius: 100%!important;
+  cursor: pointer;
+
+  .fa {
+    color: $color_2;
+    font-size: 24px;
+    margin: -0!important;
+    right: auto!important;
+    transform: translate(-50%, -50%);
+    top: 50%!important;
+    left: 50%!important;
+  }
+}
+
+.slider-control.disabled, .slider-control.disabled:focus {
   display: none!important;
+}
+
+.slider-control.left {
+  left: 20px;
+}
+
+.slider-control.right {
+  right: 20px;
+}
+
+body:not(.android) .slider-control:not([disabled]):not(.disabled):hover {
+  opacity: 1;
+  background-color: $color_4;
+
+  .fa {
+    color: $color_1;
+  }
 }
 
 
