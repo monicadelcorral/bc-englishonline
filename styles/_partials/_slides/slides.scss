@@ -343,7 +343,8 @@ body:not(.edit).body_clase {
   height: 78px;
   border-radius: 100%!important;
   cursor: pointer;
-
+  margin-top: -40px!important;
+  
   .fa {
     color: $color_2;
     font-size: 24px;
@@ -361,10 +362,20 @@ body:not(.edit).body_clase {
 
 .slider-control.left {
   left: 20px;
+
+  .fa {
+    margin-left: -3px!important;
+    margin-top: 2px!important;
+  }
 }
 
 .slider-control.right {
   right: 20px;
+
+  .fa {
+    margin-right: -3px!important;
+    margin-top: 2px!important;
+  }
 }
 
 body:not(.android) .slider-control:not([disabled]):not(.disabled):hover {
